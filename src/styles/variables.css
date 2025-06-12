@@ -1,0 +1,86 @@
+/* CSS variables for consistent theming */
+:root {
+  /* 🎨 Colors */
+  --primary-color: #87ceeb;          /* Sky blue */
+  --primary-dark: #5da9ce;
+  --primary-light: #b0e0ff;
+  --secondary-color: #ff6b6b;
+  
+  --text-color: #333;
+  --text-light: #666;
+  --text-lighter: #999;
+  
+  --bg-light: #f8f9fa;
+  --bg-dark: #121212;
+  
+  --card-bg: #fff;
+  --card-bg-dark: #1e1e1e;
+
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-color-dark: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.05);
+
+  /* ✍️ Typography */
+  --font-family: 'Poppins', sans-serif;
+  --font-size-base: 1.6rem;
+  --font-size-sm: 1.4rem;
+  --font-size-lg: 1.8rem;
+  --font-size-xl: 2.4rem;
+  --font-size-xxl: 3.6rem;
+  --font-size-jumbo: 5rem;
+  --line-height-base: 1.6;
+  --line-height-heading: 1.3;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* 📏 Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  --spacing-xxl: 8rem;
+
+  /* 🧱 Borders & Radius */
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 2rem;
+  --border-radius-full: 9999px;
+
+  /* ⚡ Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* 📦 Containers */
+  --container-width: 1200px;
+  --container-padding: 2rem;
+
+  /* 🧱 Z-Index Stack */
+  --z-index-dropdown: 100;
+  --z-index-sticky: 200;
+  --z-index-fixed: 300;
+  --z-index-modal: 400;
+  --z-index-popover: 500;
+  --z-index-toast: 600;
+}
+
+/* 🌙 Dark Mode Overrides */
+.dark-mode {
+  --text-color: #f5f5f5;
+  --text-light: #cccccc;
+  --text-lighter: #999999;
+
+  --bg-light: #1e1e1e;  /* Optional: you can remove if you're not using it */
+  --bg-dark: #121212;
+
+  --card-bg: #2a2a2a;
+  --card-bg-dark: #1a1a1a;
+
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}

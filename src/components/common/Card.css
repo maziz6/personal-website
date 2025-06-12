@@ -1,0 +1,118 @@
+/* Card.css - Styling for the card component */
+
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Card variants */
+.card-default {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-primary {
+  border: 2px solid #87CEEB;
+}
+
+.card-subtle {
+  background-color: #f8f9fa;
+  border: none;
+}
+
+.card-outlined {
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Card with elevation */
+.card-elevated {
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hoverable card */
+.card-hoverable:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Clickable card */
+.card-clickable {
+  cursor: pointer;
+}
+
+.card-clickable:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.3);
+}
+
+/* Card image */
+.card-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Image hover zoom (only on hoverable cards) */
+.card-hoverable:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* Card subcomponents */
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode styles */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .card-default {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card-outlined {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card-subtle {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .card-header,
+body.dark-mode .card-footer {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card-hoverable:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive padding adjustments */
+@media (max-width: 576px) {
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 1.2rem;
+  }
+}

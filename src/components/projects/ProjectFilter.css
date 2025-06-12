@@ -1,0 +1,56 @@
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid var(--primary-color, #87CEEB);
+  color: var(--primary-color, #87CEEB);
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--primary-color, #87CEEB);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(135, 206, 235, 0.5);
+}
+
+.filter-btn.active {
+  font-weight: 600;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .filter-buttons {
+    gap: 1.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .filter-buttons {
+    gap: 1rem;
+  }
+
+  .filter-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+}

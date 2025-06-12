@@ -1,0 +1,125 @@
+.section-title {
+  margin-bottom: 4rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Alignment modifiers */
+.section-title.center {
+  text-align: center;
+}
+
+.section-title.left {
+  text-align: left;
+}
+
+.section-title.right {
+  text-align: right;
+}
+
+/* Title styling */
+.section-title .title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  line-height: 1.2;
+  position: relative;
+}
+
+.section-title .title span {
+  color: var(--primary-color, #87CEEB);
+  background-image: linear-gradient(to right, #87CEEB 0%, #b2ebf2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Subtitle */
+.section-title .subtitle {
+  font-size: 1.6rem;
+  color: var(--text-secondary, #666);
+  max-width: 700px;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.section-title.left .subtitle {
+  margin: 0;
+}
+
+.section-title.right .subtitle {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Link */
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--primary-color, #87CEEB);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.section-link i {
+  margin-left: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.section-link:hover {
+  color: #5fb3d9;
+}
+
+.section-link:hover i {
+  transform: translateX(5px);
+}
+
+.section-link:focus-visible {
+  outline: 2px dashed var(--primary-color, #87CEEB);
+  outline-offset: 3px;
+}
+
+/* Dark mode override */
+.dark .section-title .subtitle {
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title .title {
+    font-size: 3rem;
+  }
+
+  .section-title .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    margin-bottom: 3rem;
+  }
+
+  .section-title .title {
+    font-size: 2.6rem;
+  }
+
+  .section-link {
+    font-size: 1.4rem;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -1,0 +1,120 @@
+
+.testimonials-section {
+  padding: 6rem 0;
+  background-color: var(--bg-light, #f9f9f9);
+}
+
+.testimonials-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonials-slider {
+  position: relative;
+  height: 350px;
+}
+
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  visibility: hidden;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.card.card-testimonial {
+  padding: 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-content {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  font-size: 6rem;
+  color: var(--primary-color, #87CEEB);
+  opacity: 0.2;
+  font-family: serif;
+  z-index: 0;
+}
+
+.testimonial-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+  color: var(--text-color, #333);
+}
+
+.rating {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  font-size: 1.5rem;
+  margin-right: 0.2rem;
+}
+
+.star.full {
+  color: var(--primary-color, #87CEEB);
+}
+
+.star.half {
+  position: relative;
+  color: var(--bg-light, #f9f9f9);
+  overflow: hidden;
+}
+
+.star.half::before {
+  content: '★';
+  position: absolute;
+  color: var(--primary-color, #87CEEB);
+  width: 50%;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  display: inline-block;
+}
+
+.star.empty {
+  color: var(--text-light, #999);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+/* Dark Mode Support */
+.testimonials-section.dark {
+  background-color: var(--dark-bg, #1e1e1e);
+}
+
+.testimonials-section.dark .testimonial-content p {
+  color: var(--dark-text-color, #ccc);
+}
+
+.testimonials-section.dark .star.empty {
+  color: var(--dark-muted, #555);
+}
